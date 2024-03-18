@@ -10,12 +10,12 @@ const config = {
   ],
   prefix: "",
   theme: {
-    colors: {
-      "primary-color": "#121063",
-      "secondary-color": "#000000",
-      "accent-color": "#000000",
-      "neutral-color": "#000000",
-    },
+    // colors: {
+    //   "primary-color": "#121063",
+    //   "secondary-color": "#000000",
+    //   "accent-color": "#000000",
+    //   "neutral-color": "#000000",
+    // },
     container: {
       center: true,
       padding: "2rem",
