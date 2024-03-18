@@ -1,14 +1,17 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
-import Header from "../components/Header";
+import localFont from "next/font/local";
+import Header from "@/components/Header";
 
-const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "dr.amlak",
   description: "amlak , املاک , home , خانه , بازسازی , ساخت , طراحی خانه",
 };
+
+const iranSans = localFont({
+  src : "../public/font/IRANSansWeb.woff2"
+})
 
 export default function RootLayout({
   children,
@@ -18,7 +21,7 @@ export default function RootLayout({
   return (
     <html lang="en">
 
-      <body className={inter.className}>
+      <body className={`bg-slate-400 ${iranSans.className}`}>
         <Header />
         <div>{children}</div>
       </body>

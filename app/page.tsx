@@ -1,7 +1,7 @@
 export default function Home() {
   return (
-    <main className="">
-      ashkan
+    <main className="h-screen">
+      <p>ashkan</p>
     </main>
   )
 }
