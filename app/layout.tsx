@@ -23,7 +23,7 @@ export default function RootLayout({
 
       <body className={`bg-slate-100 ${iranSans.className}`}>
         <Header />
-        <main className="h-[calc(100vh-70px)] relative top-[70px] p-5">
+        <main className="min-h-[calc(100vh-70px)] relative top-[70px] p-5 bg-white">
           {children}
         </main>
       </body>
