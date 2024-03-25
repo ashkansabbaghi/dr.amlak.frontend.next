@@ -5,7 +5,7 @@ import Link from "next/link";
 export default function Header() {
   return (
     <div className="bg-white dark:bg-gray-900 fixed w-full z-20 top-0 start-0 ">
-      <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+      <div className="container flex flex-wrap items-center justify-between mx-auto p-4">
         <Link href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
           {/* <img className="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500" alt="Your Company" /> */}
           <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">AMLAK</span>
