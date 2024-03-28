@@ -96,7 +96,7 @@ export default function Home() {
               </a>
             </div>
 
-            <div className="w-full md:w-4/12 px-4 mr-auto ml-auto transform -rotate-6">
+            <div className="w-full md:w-4/12 px-4 mr-auto ml-auto md:transform md:-rotate-6">
               <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg bg-pink-600">
                 <img
                   alt="..."

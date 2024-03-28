@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import localFont from "next/font/local";
-import Header from "@/components/Header";
-import Footer from "../components/Footer";
 
 
 export const metadata: Metadata = {
@@ -23,11 +21,7 @@ export default function RootLayout({
     <html lang="en" dir="rtl">
 
       <body className={`bg-slate-100 ${iranSans.className}`}>
-        <Header />
-        <main className="min-h-[calc(100vh-70px)] relative top-[70px] px-5 bg-white">
-          {children}
-        </main>
-        <Footer />
+        {children}
       </body>
     </html>
   );

@@ -1,14 +1,15 @@
 import CardService from "@/components/CardService";
+import Title from "@/components/Title";
 import Link from "next/link";
 
 export default function Services() {
   return (
     <>
       <div className="container p-4">
-        <h1 className="text-3xl font-bold mb-16">سرویس ها</h1>
+        <Title text={"سرویس ها"} />
         <div className="grid grid-cols-3 gap-4">
           <Link href={"services/rent"} >
-            <CardService
+             <CardService
               className={"w-auto text-center"}
               icons={<i className="fas fa-award"></i>}
               title={"رهن و اجاره"}
@@ -39,10 +40,6 @@ export default function Services() {
           </Link>
         </div>
       </div>
-
-
-
-      <Link href="/services/request">request</Link>
     </>
   )
 }
