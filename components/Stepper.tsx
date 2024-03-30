@@ -1,7 +1,6 @@
 'use client';
 
-import { FaImage , FaUser,FaNewspaper } from "react-icons/fa";
-
+import { FaImage, FaUser, FaNewspaper } from "react-icons/fa";
 import { CustomInput } from "./CustomInput";
 import { useState } from "react";
 
@@ -15,29 +14,38 @@ export const Stepper = () => {
 
     return (
         <>
-            <ul className="relative m-0 flex list-none justify-between overflow-visible p-0 transition-[height] duration-200 ease-in-out">
+        
+            <ul dir="ltr" className={`grid grid-cols-1 divide-x divide-gray-100 overflow-hidden rounded-lg 
+             text-sm sm:grid-cols-3 mb-8 `}>
                 {steps.map(step => (
                     <li
                         key={step.num}
-                        className="flex items-center justify-start relative cursor-pointer bg-none"
+                        className={`relative flex items-center justify-center gap-2 p-4 cursor-pointer 
+                        ${countStep >= step.num? "bg-green-100 text-green-800" : ""}`}
                         onClick={() => { setCountStep(step.num) }}>
-                        <span className="flex relative items-center justify-center w-10 h-10 rounded-full lg:h-12 lg:w-12 shrink-0">
-                            <p className="text-slate-900 absolute top-14 text-sm font-bold w-max hidden md:block">{step.title}</p>
-                            <step.icon className="w-6 h-6 text-slate-900" />
+                        <p className="leading-none sm:block hidden">
+                            <strong className="block font-bold text-sm md:text-base"> {step.title} </strong>
+                        </p>
+                        <step.icon className="w-5 h-5 mx-1 " />
+                        <span
+                            className="absolute -left-2 top-1/2 hidden size-4 -translate-y-1/2 rotate-45  sm:block 
+                                       ltr:border-b-0 ltr:border-s-0 ltr:bg-white rtl:border-e-0 rtl:border-t-0 rtl:bg-white">
                         </span>
                     </li>
+
                 ))}
+
             </ul>
 
             {/*step 1*/}
-            {countStep === 1 && <div className="flex flex-col gap-y-10 w-full transition-all duration-500 ease-in-out pb-20 text-slate-900 mt-10">
+            {countStep === 1 && <div className="flex flex-col gap-y-10 w-full transition-all duration-500 ease-in-out pb-20 text-slate-900">
                 <CustomInput label={'نام کاربری'} />
                 <CustomInput label={'ایمیل'} />
                 <CustomInput label={'شماره همراه'} />
             </div>}
 
             {/*step 2*/}
-            {countStep === 2 && <div className="flex flex-col gap-y-10 w-full transition-all duration-500 ease-in-out pb-20 text-slate-900 mt-10">
+            {countStep === 2 && <div className="flex flex-col gap-y-10 w-full transition-all duration-500 ease-in-out pb-20 text-slate-900">
                 <div className="">
                     <CustomInput label={'آدرس ملک'} />
                     {/*Suggestion Address Dropdown*/}
@@ -49,7 +57,6 @@ export const Stepper = () => {
                         </ul>
                     </div>
                 </div>
-
 
                 <div className="flex justify-between items-center mb-7">
                     <div className="flex items-center">

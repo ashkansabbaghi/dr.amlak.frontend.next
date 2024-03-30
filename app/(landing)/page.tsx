@@ -1,5 +1,5 @@
 import CardService from "@/components/CardService"
-
+import Link from "next/link"
 
 export default function Home() {
   return (
@@ -28,14 +28,9 @@ export default function Home() {
                 </p>
               </div>
               <div className="mt-12">
-                <a className="get-started text-white font-bold px-6 py-4 rounded outline-none focus:outline-none mr-1 mb-1
-                   bg-pink-500 active:bg-pink-600 uppercase text-sm shadow hover:shadow-lg ease-linear
-                    transition-all duration-150" href="/learning-lab/tailwind-starter-kit/documentation/download">Get started</a>
-                <a href="https://github.com/creativetimofficial/tailwind-starter-kit"
-                  className="github-star ml-1 text-white font-bold px-6 py-4 rounded outline-none focus:outline-none 
-                    mr-1 mb-1 bg-blueGray-700 active:bg-blueGray-600 uppercase text-sm shadow hover:shadow-lg" target="_blank">
-                  Github Star
-                </a>
+                <Link className="get-started text-white font-bold px-6 py-4 rounded outline-none focus:outline-none mr-1 mb-1
+                   bg-slate-700 active:bg-slate-800 hover:bg-slate-800 uppercase text-sm shadow hover:shadow-lg ease-linear
+                    transition-all duration-150" href="/services">Get started</Link>
               </div>
             </div>
 
@@ -465,77 +460,6 @@ export default function Home() {
                 Some quick example text to build on the card title and make up
                 the bulk of the card s content.
               </p>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section className="relative block py-24 lg:pt-0 bg-gray-900">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-wrap justify-center lg:-mt-64 -mt-48">
-            <div className="w-full lg:w-6/12 px-4">
-              <div className="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-gray-300">
-                <div className="flex-auto p-5 lg:p-10">
-                  <h4 className="text-2xl font-semibold">
-                    Want to work with us?
-                  </h4>
-                  <p className="leading-relaxed mt-1 mb-4 text-gray-600">
-                    Complete this form and we will get back to you in 24 hours.
-                  </p>
-                  <div className="relative w-full mb-3 mt-8">
-                    <label
-                      className="block uppercase text-gray-700 text-xs font-bold mb-2"
-                      htmlFor="full-name"
-                    >
-                      Full Name
-                    </label>
-                    <input
-                      type="text"
-                      className="border-0 px-3 py-3 placeholder-gray-400 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full"
-                      placeholder="Full Name"
-                      style={{ transition: "all .15s ease" }}
-                    />
-                  </div>
-
-                  <div className="relative w-full mb-3">
-                    <label
-                      className="block uppercase text-gray-700 text-xs font-bold mb-2"
-                      htmlFor="email"
-                    >
-                      Email
-                    </label>
-                    <input
-                      type="email"
-                      className="border-0 px-3 py-3 placeholder-gray-400 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full"
-                      placeholder="Email"
-                      style={{ transition: "all .15s ease" }}
-                    />
-                  </div>
-
-                  <div className="relative w-full mb-3">
-                    <label
-                      className="block uppercase text-gray-700 text-xs font-bold mb-2"
-                      htmlFor="message"
-                    >
-                      Message
-                    </label>
-                    <textarea
-                      rows={4}
-                      cols={80}
-                      className="border-0 px-3 py-3 placeholder-gray-400 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full"
-                      placeholder="Type a message..."
-                    />
-                  </div>
-                  <div className="text-center mt-6">
-                    <button
-                      className="bg-gray-900 text-white active:bg-gray-700 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1"
-                      type="button"
-                      style={{ transition: "all .15s ease" }}
-                    >
-                      Send Message
-                    </button>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </div>

@@ -8,9 +8,7 @@ export const metadata: Metadata = {
   description: "amlak , املاک , home , خانه , بازسازی , ساخت , طراحی خانه",
 };
 
-const iranSans = localFont({
-  src: "../public/font/IRANSansWeb.woff2"
-})
+const iranSans = localFont({ src: "../public/font/IRANSansWeb.woff2" })
 
 export default function RootLayout({
   children,
@@ -19,8 +17,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" dir="rtl">
-
-      <body className={`bg-slate-100 ${iranSans.className}`}>
+      <body className={`${iranSans.className}`}>
         {children}
       </body>
     </html>

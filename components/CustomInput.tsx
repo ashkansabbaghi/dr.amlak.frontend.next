@@ -4,15 +4,19 @@ export const CustomInput = ({ label }: { label: string }) => {
         <>
             <div className="text-right">
                 <div className="relative">
-                    <input
-                        id="inputName"
-                        className="block py-2.5 px-0 w-full text-sm bg-transparent border-0 border-b-2
-                      border-gray-300 appearance-none text-white  focus:outline-none
-                        text-right focus:ring-0 focus:border-blue-600 peer"
-                    />
-                    <label className="absolute text-sm text-white duration-300 transform -translate-y-6 scale-75 right-0
-                    top-3 -z-10 peer-focus:end-0 peer-focus:text-white peer-placeholder-shown:scale-100
-                    peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">
+                    <input placeholder=""
+                        className="peer h-full w-full border-b border-blue-gray-200 bg-transparent pt-4 pb-1.5 font-sans text-sm 
+                        font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border-blue-gray-200 
+                        focus:border-gray-500 focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50 placeholder:opacity-0 
+                        focus:placeholder:opacity-100" />
+                    <label
+                        className="after:content[''] pointer-events-none absolute left-0  -top-1.5 flex h-full w-full select-none 
+                        !overflow-visible truncate text-[11px] font-normal leading-tight text-gray-500 transition-all after:absolute 
+                        after:-bottom-1.5 after:block after:w-full after:scale-x-0 after:border-b-2 after:border-gray-500 
+                        after:transition-transform after:duration-300 peer-placeholder-shown:text-sm peer-placeholder-shown:leading-[4.25] 
+                        peer-placeholder-shown:text-blue-gray-500 peer-focus:text-[11px] peer-focus:leading-tight peer-focus:text-gray-900 
+                        peer-focus:after:scale-x-100 peer-focus:after:border-gray-900 peer-disabled:text-transparent 
+                        peer-disabled:peer-placeholder-shown:text-blue-gray-500">
                         {label}
                     </label>
                 </div>

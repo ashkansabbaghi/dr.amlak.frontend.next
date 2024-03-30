@@ -16,7 +16,7 @@ export default function DashboardLayout({
     return (
         <>
             <Header />
-            <main className="min-h-[calc(100vh-70px)] relative top-[70px] px-4 bg-white">
+            <main className="container relative top-[70px] px-4 bg-white">
                 {children}
             </main>
             <Footer />

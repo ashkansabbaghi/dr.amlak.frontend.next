@@ -15,7 +15,7 @@ export default function MainLayout({
     return (
         <>
             <Header />
-            <main className="container relative top-[70px] px-4 bg-white mb-36">
+            <main className="relative top-[70px] px-4 bg-white">
                 {children}
             </main>
             <Footer />
