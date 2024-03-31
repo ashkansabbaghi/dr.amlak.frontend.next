@@ -58,11 +58,13 @@ export const Stepper = () => {
                     </div>
                 </div>
 
+                <div> نوع ملک</div>
                 <div className="flex justify-between items-center mb-7">
+
                     <div className="flex items-center">
                         <label
                             htmlFor="not"
-                            className="pr-2 text-sm font-medium text-white cursor-pointer">ندارد</label>
+                            className="pr-2 text-sm font-medium text-slate-900 cursor-pointer">ندارد</label>
                         <input
                             id="not"
                             type="radio"
@@ -73,7 +75,7 @@ export const Stepper = () => {
                     <div className="flex items-center">
                         <label
                             htmlFor="affidavit"
-                            className="pr-2 text-sm font-medium text-white cursor-pointer">قولنامه‌ای</label>
+                            className="pr-2 text-sm font-medium text-slate-900 cursor-pointer">قولنامه‌ای</label>
                         <input
                             id="affidavit"
                             type="radio"
@@ -84,7 +86,7 @@ export const Stepper = () => {
                     <div className="flex items-center">
                         <label
                             htmlFor="deed"
-                            className="pr-2 text-sm font-medium text-white cursor-pointer">سند دار</label>
+                            className="pr-2 text-sm font-medium text-slate-900 cursor-pointer">سند دار</label>
                         <input
                             id="deed"
                             type="radio"
@@ -92,7 +94,6 @@ export const Stepper = () => {
                             name="deed"
                             className="w-5 h-5 bg-gray-100 rounded-full border-gray-300 focus:ring-0 focus:outline-none cursor-pointer" />
                     </div>
-                    <div>: نوع ملک</div>
                 </div>
             </div>}
         </>
