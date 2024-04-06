@@ -1,11 +1,14 @@
+'use client';
 import { Button } from "@/components/ui/button";
 import { IoIosMenu } from "react-icons/io";
 import Link from "next/link";
+import clsx from "clsx";
+import { usePathname } from "next/navigation";
 
 export default function Header() {
   return (
-    <div className="bg-white dark:bg-gray-900 fixed w-full z-20 top-0 start-0 ">
-      <div className="container flex flex-wrap items-center justify-between mx-auto p-4">
+    <div className="h-[72px] bg-white dark:bg-gray-900 fixed w-full z-20 top-0 start-0">
+      <div className="h-full container flex flex-wrap items-center justify-between mx-auto">
         <Link href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
           {/* <img className="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500" alt="Your Company" /> */}
           <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">AMLAK</span>
@@ -17,8 +20,9 @@ export default function Header() {
             <IoIosMenu className="w-10 h-10" aria-hidden="true" />
           </button>
         </div>
-        <div className="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
-          <ul className="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+        <div className="items-center justify-between hidden w-full md:h-full md:flex md:w-auto md:order-1" id="navbar-sticky">
+          <ul className="flex flex-col md:h-full p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 
+          rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
             <MenuItem  name="خانه" href="/"/>
             <MenuItem  name="محصولات" href="/products"/>
             <MenuItem  name="سرویس ها" href="/services"/>
@@ -30,13 +34,18 @@ export default function Header() {
 }
 
 export const MenuItem = ({ name, href }: { name: string, href: string }) => {
+  const pathname = usePathname();
+  
   return (
-    <li>
       <Link
         href={href}
-        className="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500"
+        className={clsx(
+          "flex items-center py-2 px-3 md:border-b-4 md:border-transparent text-white bg-slate-700 md:bg-transparent md:text-slate-900 md:p-0 md:dark:text-slate-500",
+          {
+            "md:text-blue-600 md:border-b-4 md:!border-blue-600" : pathname === href,
+          }
+          )}
         aria-current="page">{name}</Link>
-    </li>
   )
 }
 
