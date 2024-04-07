@@ -1,12 +1,13 @@
 import type { Config } from "tailwindcss"
+import {nextui} from "@nextui-org/react"
 
 const config = {
-  darkMode: ["class"],
   content: [
     './pages/**/*.{ts,tsx}',
     './components/**/*.{ts,tsx}',
     './app/**/*.{ts,tsx}',
     './src/**/*.{ts,tsx}',
+    "./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}"
   ],
   prefix: "",
   theme: {
@@ -25,7 +26,16 @@ const config = {
     },
     extend: {},
   },
-  plugins: [require("tailwindcss-animate")],
+  darkMode: ["class"],
+  plugins: [
+    require("tailwindcss-animate"), 
+    nextui({
+      prefix: "nextui", // prefix for themes variables
+      addCommonColors: false, // override common colors (e.g. "blue", "green", "pink").
+      defaultTheme: "light", // default theme from the themes object
+      defaultExtendTheme: "light", // default theme to extend on custom them
+    })
+  ]
 } satisfies Config
 
 export default config

@@ -1,11 +1,27 @@
 'use client';
-import { Button } from "@/components/ui/button";
+
+// import { Button } from "@/components/ui/button";
 import { IoIosMenu } from "react-icons/io";
-import Link from "next/link";
+// import Link from "next/link";
 import clsx from "clsx";
 import { usePathname } from "next/navigation";
+import {Navbar, NavbarBrand, NavbarMenuToggle, NavbarMenu, NavbarMenuItem, NavbarContent, NavbarItem, Link, Button} from "@nextui-org/react";
+
 
 export default function Header() {
+  const menuItems = [
+    "Profile",
+    "Dashboard",
+    "Activity",
+    "Analytics",
+    "System",
+    "Deployments",
+    "My Settings",
+    "Team Settings",
+    "Help & Feedback",
+    "Log Out",
+  ]
+
   return (
     <div className="h-[72px] bg-white dark:bg-gray-900 fixed w-full z-20 top-0 start-0">
       <div className="h-full container flex flex-wrap items-center justify-between mx-auto">
@@ -37,7 +53,8 @@ export const MenuItem = ({ name, href }: { name: string, href: string }) => {
   const pathname = usePathname();
   
   return (
-      <Link
+    <NavbarItem>
+    <Link
         href={href}
         className={clsx(
           "flex items-center py-2 px-3 md:border-b-4 md:border-transparent text-white bg-slate-700 md:bg-transparent md:text-slate-900 md:p-0 md:dark:text-slate-500",
@@ -46,6 +63,8 @@ export const MenuItem = ({ name, href }: { name: string, href: string }) => {
           }
           )}
         aria-current="page">{name}</Link>
+  </NavbarItem>
+
   )
 }
 
