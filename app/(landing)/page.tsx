@@ -1,4 +1,5 @@
 import CardService from "@/components/CardService"
+import Image from "next/image"
 import Link from "next/link"
 
 export default function Home() {
@@ -96,7 +97,7 @@ export default function Home() {
                 <img
                   alt="..."
                   src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1051&q=80"
-                  className="w-full align-middle rounded-t-lg"
+                  className="w-full align-middle rounded-t-lg"  
                 />
                 <blockquote className="relative p-8 mb-4">
                   <svg
@@ -237,12 +238,6 @@ export default function Home() {
           <div className="flex flex-wrap">
             <div className="w-full md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-4">
               <div className="px-6">
-                {/* <img
-                    alt="..."
-                    src={require("assets/img/team-1-800x800.jpg").default}
-                    className="shadow-lg rounded-full max-w-full mx-auto"
-                    style={{ maxWidth: "120px" }}
-                  /> */}
                 <div className="pt-6 text-center">
                   <h5 className="text-xl font-bold">
                     Ryan Tompson

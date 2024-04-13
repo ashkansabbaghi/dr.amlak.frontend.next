@@ -15,7 +15,7 @@ export default function MainLayout({
     return (
         <>
             <Header />
-            <main className="relative min-h-[calc(100vh-240px)] top-[70px] px-4 bg-white">
+            <main className="relative min-h-[calc(100vh-240px)] px-4 bg-white">
                 {children}
             </main>
             <Footer />
