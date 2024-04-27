@@ -80,7 +80,7 @@ export default function Header() {
               شروع
             </Button>
           </NavbarItem>
-        </NavbarContent>
+        </NavbarContent>  
 
         <NavbarMenu>
           {menuItems.map((item, index) => (
@@ -105,7 +105,7 @@ export default function Header() {
 
 export const MenuItem = ({ name, href }: { name: string, href: string }) => {
   const pathname = usePathname();
-
+ 
   return (
     <NavbarItem>
       <Link
