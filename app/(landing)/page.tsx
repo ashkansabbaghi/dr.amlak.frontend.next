@@ -70,9 +70,8 @@ export default function Home() {
               </h3>
               <p className="text-lg font-light leading-relaxed mt-4 mb-4 text-gray-700">
                 در آینده‌ای نزدیک، می‌خواهیم تمام خدماتمان را به شیوه‌ی آنلاین ارائه دهیم.
-              </p>
-              <p className="text-lg font-light leading-relaxed mt-0 mb-4 text-gray-700">
                 با بهره‌گیری از ابزارها و تکنولوژی‌های جذاب،تجربه‌ی بی‌نظیری برای همراهانمان فراهم خواهیم کرد.
+
               </p>
               <a
                 href="https://www.creative-tim.com/learning-lab/tailwind-starter-kit#/presentation"
@@ -82,11 +81,11 @@ export default function Home() {
               </a>
             </div>
 
-            <div className="w-full md:w-4/12 px-4 mr-auto ml-auto md:transform md:-rotate-6">
+            <div className="w-full md:w-4/12 px-4 mr-auto ml-auto md:transform">
               <Image
                 src="/img/technology.jpg"
-                width={ 200 }
-                height={ 300 }
+                width={200}
+                height={300}
                 className="w-full align-middle rounded-lg"
                 alt="technology image"
               />
@@ -95,7 +94,8 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="relative py-20">
+{/* section 3 */}
+      <section className="relative py-20 hidden">
         <div
           className="bottom-auto top-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden -mt-20"
           style={{ height: "80px" }}
@@ -185,7 +185,7 @@ export default function Home() {
       </section>
 
 
-      <section className="pt-20 pb-48">
+      <section className="pt-20 pb-48 hidden">
         <div className="container mx-auto px-4">
           <div className="flex flex-wrap justify-center text-center mb-24">
             <div className="w-full lg:w-6/12 px-4">
@@ -350,7 +350,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="pb-20 relative block bg-gray-900">
+      <section className="pb-20 relative block bg-gray-900 hidden">
         <div
           className="bottom-auto top-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden -mt-20"
           style={{ height: "80px" }}
