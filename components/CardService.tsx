@@ -9,7 +9,7 @@ function CardService({ icons , title, desc, colorIcon  , className , heightCart}
     return (
         <>
  <div className={className}>
-            <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-sm 
+            <div className="relative flex flex-col min-w-0 break-words bg-white w-full md:mb-8 mb-2 shadow-sm 
                             hover:shadow-2xl hover:shadow-gray-200 rounded-lg transition">
                 <div className={`px-4 py-5 flex-auto ${heightCart}`}>
                     <div className={`text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full ${colorIcon}`}>

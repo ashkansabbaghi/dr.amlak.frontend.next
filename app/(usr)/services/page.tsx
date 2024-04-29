@@ -3,11 +3,12 @@ import Title from "@/components/Title";
 import Link from "next/link";
 
 export default function Services() {
+  const h_card = "md:h-[210px] h-auto";
   return (
     <>
       <div className="container p-4">
         <Title text={"سرویس ها"} />
-        <div className="grid grid-cols-3 gap-4">
+        <div className="grid md:grid-cols-3 md:gap-4">
           <Link href={"services/rent"} >
              <CardService
               className={"w-auto text-center"}
@@ -15,7 +16,7 @@ export default function Services() {
               title={"رهن و اجاره"}
               desc={"وارد کردن اطلاعات ملک برای کسب بهترین قیمت و سرعت در اجاره."}
               colorIcon={"bg-blue-400"}
-              heightCart={"h-[210px]"}
+              heightCart={h_card}
             />
           </Link>
           <Link href={"services/rebuilding"} >
@@ -25,7 +26,7 @@ export default function Services() {
               title={"بازسازی"}
               desc={" راهنمایی برای بهبود قیمت و تسریع در فرآیند بازسازی ملک."}
               colorIcon={"bg-red-400"}
-              heightCart={"h-[210px]"}
+              heightCart={h_card}
             />
           </Link>
           <Link href={"services/sales"} >
@@ -35,7 +36,7 @@ export default function Services() {
               title={"خرید و فروش"}
               desc={"راهنمایی برای بهره‌مندی از بهترین قیمت و سرعت در فرآیند خرید ملک."}
               colorIcon={"bg-green-400"}
-              heightCart={"h-[210px]"}
+              heightCart={h_card}
             />
           </Link>
         </div>
